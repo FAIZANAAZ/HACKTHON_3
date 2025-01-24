@@ -36,7 +36,7 @@ export default function ProductFilterColor() {
     selectedDressStyles: [] as string[],
   })
 
-  const handleFilterChange = (filterName: string, value: any) => {
+  const handleFilterChange = (filterName: string, value:string[] | number[]) => {
     setSelectedFilters((prevFilters) => ({
       ...prevFilters,
       [filterName]: value,

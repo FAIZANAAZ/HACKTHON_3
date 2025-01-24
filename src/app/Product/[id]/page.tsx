@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight, Star } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
-import Arrivals from '@/components/Arrival'
-import { ReviewCard } from '@/components/revews/reviews-card'
 import CommentBlog from '@/components/comment'
 
 

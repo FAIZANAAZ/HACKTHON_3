@@ -24,7 +24,7 @@ const sizes = ["S", "XXL", "XL", "L", "M"]
 
 
 interface FiltersSidebarProps {
-  onFilterChange: (filterName: string, value: any) => void
+  onFilterChange: (filterName: string, value: string[] | number[]) => void
   selectedFilters: {
     priceRange: number[]
     selectedColors: string[]
@@ -211,76 +211,3 @@ export function FiltersSidebar({ onFilterChange, selectedFilters }: FiltersSideb
   )
 }
 
-
-
-// "use client"
-// import * as React from "react"
-// import { Slider } from "@/components/ui/slider"
-
-// const categories = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"]
-
-// const colors = [
-//   { name: "Green", class: "bg-[#00C12B]" },
-//   { name: "Red", class: "bg-[#F50606]" },
-//   { name: "Yellow", class: "bg-[#F5DD06]" },
-//   { name: "Orange", class: "bg-[#F57906]" },
-//   { name: "Blue", class: "bg-[#063AF5]" },
-//   { name: "Black", class: "bg-black" },
-//   { name: "White", class: "bg-white" },
-// ]
-
-// interface FiltersSidebarProps {
-//   onFilterChange: (filterName: string, value: any) => void
-//   selectedFilters: {
-//     priceRange: number[]
-//     selectedColors: string[]
-//     selectedCategories: string[]
-//   }
-// }
-
-// export function FiltersSidebar({ onFilterChange, selectedFilters }: FiltersSidebarProps) {
-//   const [priceRange, setPriceRange] = React.useState(selectedFilters.priceRange)
-//   const [selectedColors, setSelectedColors] = React.useState(selectedFilters.selectedColors)
-//   const [selectedCategories, setSelectedCategories] = React.useState(selectedFilters.selectedCategories)
-
-//   const handlePriceChange = (newPriceRange: number[]) => {
-//     setPriceRange(newPriceRange)
-//     onFilterChange("priceRange", newPriceRange)
-//   }
-
-//   const handleColorChange = (color: string) => {
-//     const updatedColors = selectedColors.includes(color)
-//       ? selectedColors.filter((c) => c !== color)
-//       : [...selectedColors, color]
-//     setSelectedColors(updatedColors)
-//     onFilterChange("selectedColors", updatedColors)
-//   }
-
-//   const handleCategoryChange = (category: string) => {
-//     const updatedCategories = selectedCategories.includes(category)
-//       ? selectedCategories.filter((c) => c !== category)
-//       : [...selectedCategories, category]
-//     setSelectedCategories(updatedCategories)
-//     onFilterChange("selectedCategories", updatedCategories)
-//   }
-
-//   return (
-//     <div className="flex flex-col w-[250px] p-4 border">
-//       <h2 className="font-bold text-lg">Filters</h2>
-
-//       <div>
-//         <h3>Price Range</h3>
-//         <Slider min={50} max={500} value={priceRange} onChange={handlePriceChange} />
-//       </div>
-
-//       <div>
-//         <h3>Colors</h3>
-//         {colors.map((color) => (
-//           <button key={color.name} onClick={() => handleColorChange(color.name)}>
-//             {color.name}
-//           </button>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }

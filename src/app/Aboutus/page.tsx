@@ -84,17 +84,17 @@ export default function AboutSection() {
               <div data-aos="zoom-in" className="space-y-6 text-gray-600">
                 <p>
                   Our fashion journey began with a simple idea: to create clothing that not only looks good but feels
-                  good too. From a small boutique to an international brand, we've grown while staying true to our core
+                  good too. From a small boutique to an international brand, we have grown while staying true to our core
                   values of quality, sustainability, and style.
                 </p>
                 <p>
-                  We're committed to revolutionizing the fashion industry through innovative designs, sustainable
+                  We are committed to revolutionizing the fashion industry through innovative designs, sustainable
                   practices, and a customer-first approach. Our diverse and talented team of designers and craftspeople
                   continue to push boundaries, constantly striving to create pieces that empower and inspire.
                 </p>
                 <p>
                   Founded in 2010 by fashion visionaries Emma and Liam Thompson, our brand has evolved from a local
-                  favorite to a global trendsetter. We've dressed celebrities, collaborated with renowned artists, and
+                  favorite to a global trendsetter. We have dressed celebrities, collaborated with renowned artists, and
                   most importantly, helped millions express themselves through fashion.
                 </p>
 
@@ -180,19 +180,19 @@ export default function AboutSection() {
                 <div data-aos="zoom-in" className="space-y-6 text-gray-600">
                   <p className="text-lg">
                     Our mission is to empower individuals to express their unique identities through fashion. We believe
-                    that clothing is more than just fabric; it's a form of self-expression, a confidence booster, and a
+                    that clothing is more than just fabric; it is a form of self-expression, a confidence booster, and a
                     way to connect with others.
                   </p>
 
                   <p>
-                    We're committed to sustainable practices, ethical manufacturing, and inclusive sizing. Our goal is
+                    We are committed to sustainable practices, ethical manufacturing, and inclusive sizing. Our goal is
                     to create fashion that not only looks good but also feels good - both for the wearer and for the
                     planet.
                   </p>
 
                   <p className="font-medium text-gray-800">
-                    Remember, fashion is about more than following trends. It's about finding your own style, embracing
-                    your uniqueness, and feeling confident in your own skin. Let's redefine fashion together.
+                    Remember, fashion is about more than following trends. It is about finding your own style, embracing
+                    your uniqueness, and feeling confident in your own skin. Lets redefine fashion together.
                   </p>
                 </div>
               </div>

@@ -13,40 +13,8 @@ interface SidebarProps {
 }
 
 export function Sidebar({ open, onOpenChange }: SidebarProps) {
-  const pathname = usePathname()
+ 
 
-  const routes = [
-    {
-      label: "Products",
-      icon: Package,
-      href: "/products",
-      active: pathname === "/products",
-    },
-    {
-      label: "Orders",
-      icon: ShoppingCart,
-      href: "/orders",
-      active: pathname === "/orders",
-    },
-    {
-      label: "Customers",
-      icon: Users,
-      href: "/customers",
-      active: pathname === "/customers",
-    },
-    {
-      label: "Statistics",
-      icon: BarChart2,
-      href: "/statistics",
-      active: pathname === "/statistics",
-    },
-    {
-      label: "Settings",
-      icon: Settings,
-      href: "/settings",
-      active: pathname === "/settings",
-    },
-  ]
 
   return (
     <>

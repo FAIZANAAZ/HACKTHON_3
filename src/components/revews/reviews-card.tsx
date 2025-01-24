@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, MoreVertical, CheckCircle2, Edit2, Trash2 } from "lucide-react"
+import { Star, CheckCircle2, Edit2, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface ReviewCardProps {
@@ -41,10 +41,10 @@ export function ReviewCard({ _id, name, rating, date, content, isVerified, onEdi
                 size="icon"
                 onClick={() => onEdit({
                   _id, name, rating, date, content, isVerified,
-                  onEdit: function (data: ReviewCardProps): void {
+                  onEdit: function (): void {
                     throw new Error("Function not implemented.")
                   },
-                  onDelete: function (id: string): void {
+                  onDelete: function (): void {
                     throw new Error("Function not implemented.")
                   }
                 })}

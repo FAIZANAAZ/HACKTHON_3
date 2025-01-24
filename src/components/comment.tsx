@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from 'react'
-import { LiaCommentsSolid } from 'react-icons/lia'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { MdOutlineMailOutline, MdOutlineRateReview } from 'react-icons/md'

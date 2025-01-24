@@ -4,9 +4,19 @@ import { useState, useEffect } from "react";
 import { client } from "@/sanity/lib/client";
 import Card from "@/components/cards";
 
+interface CasualData {
+  casualHeading: string;
+  casualRating: number;
+  casualImage: {
+    asset: {
+      url: string;
+    };
+  },
+  casualPrice: number
+}
 export default function ProductFilterColor() {
-  const [res, setRes] = useState<any[]>([]);
-  const [sortedData, setSortedData] = useState<any[]>([]);
+  const [res, setRes] = useState<CasualData[]>([]);
+  const [sortedData, setSortedData] = useState<CasualData[]>([]);
   const [sortOption, setSortOption] = useState("");
 
   useEffect(() => {
@@ -55,11 +65,11 @@ export default function ProductFilterColor() {
         </div>
 
         <div className="w-full h-fit flex flex-col md:flex-row flex-wrap justify-center items-center md:gap-x-[80px] md:gap-y-[150px] md:mt-10">
-          {sortedData.map((item: any, index: number) => {
+          {sortedData.map((item: CasualData, index: number) => {
             return (
               <Card
                 key={index}
-                imageUrl={item.casualImage}
+                imageUrl={item.casualImage.asset.url}
                 h1={item.casualHeading}
                 ranking={item.casualRating}
                 price={item.casualPrice}
