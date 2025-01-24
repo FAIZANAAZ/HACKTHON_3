@@ -1,6 +1,5 @@
 "use client"
 import { client } from "@/sanity/lib/client";
-import { Any } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -8,7 +7,7 @@ import { motion } from "framer-motion";
 
 
 export default  function Hero() {
-const [fetchdata, setfetchData] = useState<Any>()
+const [fetchdata, setfetchData] = useState<string>()
    useEffect(() => {
     const fetchimage =async()=>{
         const res = await client.fetch(`*[_type=='landingpage'][1]{'frontWebImage':sections[0].frontWebImage.asset->url}`);
@@ -53,7 +52,7 @@ const [fetchdata, setfetchData] = useState<Any>()
                 
                 
                 <Image
-                    src={fetchdata}
+                    src={fetchdata || ""}
                     alt="hero image"
                     fill
                     className="object-contain md:object-cover"
