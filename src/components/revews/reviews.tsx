@@ -115,7 +115,7 @@ export default function ReviewsSection() {
       }
       resetForm()
     } catch (error) {
-      toast.error(`Failed to ${isEditing ? "update" : "post"} review`)
+      toast.error(`Failed to ${isEditing ? "update" : "post"} review, ${error}`)
     }
   }
 
@@ -131,7 +131,7 @@ export default function ReviewsSection() {
       setReviews((prevReviews) => prevReviews.filter((review) => review._id !== id))
       toast.success("Review deleted successfully")
     } catch (error) {
-      toast.error("Failed to delete review")
+      toast.error(`Failed to delete review ${error}`)
     }
   }
 
