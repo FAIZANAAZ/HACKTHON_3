@@ -68,12 +68,7 @@ export function FiltersSidebar({ onFilterChange, selectedFilters }: FiltersSideb
     onFilterChange("selectedSizes", updatedSizes)
   }
 
-  const handleDressStyleChange = (style: string) => {
-    const updatedStyles = selectedFilters.selectedDressStyles.includes(style)
-      ? selectedFilters.selectedDressStyles.filter((s: string) => s !== style)
-      : [...selectedFilters.selectedDressStyles, style]
-    onFilterChange("selectedDressStyles", updatedStyles)
-  }
+
 
   return (
     <div className="box-border flex flex-col items-start w-[295px] min-h-[1220px] p-[20px_24px] gap-6 border border-black/10 rounded-[20px] bg-white font-['Satoshi']">
