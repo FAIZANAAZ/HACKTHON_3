@@ -22,7 +22,7 @@ export default function SignIn() {
 
     setTimeout(() => {
       setIsLoading(false)
-      if (email === "faixanaaz@gmail.com" && password === "faiza13579!@#$") {
+      if (email === "faixanaaz@gmail.com" && password === "faiza1379") {
         router.push("/Dashboard")
         toast.success("Sign in successful", {
           description: "Welcome back!",

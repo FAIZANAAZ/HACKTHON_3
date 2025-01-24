@@ -7,11 +7,7 @@ import Card from "@/components/cards";
 interface CasualData {
   casualHeading: string;
   casualRating: number;
-  casualImage: {
-    asset: {
-      url: string;
-    };
-  },
+  casualImage: string,
   casualPrice: number
 }
 export default function ProductFilterColor() {
@@ -69,7 +65,7 @@ export default function ProductFilterColor() {
             return (
               <Card
                 key={index}
-                imageUrl={item.casualImage.asset.url}
+                imageUrl={item.casualImage}
                 h1={item.casualHeading}
                 ranking={item.casualRating}
                 price={item.casualPrice}

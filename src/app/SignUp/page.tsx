@@ -26,7 +26,7 @@ export default function SignUp() {
 
     setTimeout(() => {
       setIsLoading(false)
-      if (email === "faixanaaz@gmail.com" && password === "faiza13579!@#$") {
+      if (email === "faixanaaz@gmail.com" && password === "faiza1379") {
         router.push("/Dashboard")
         toast.success("Sign up successful", {
           description: "Welcome to our platform!",
