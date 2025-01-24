@@ -4,7 +4,6 @@ import * as React from "react"
 import Image from "next/image"
 import { Minus, Plus, Trash } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import Link from "next/link"
 
 type CartItem = {
@@ -142,13 +141,7 @@ export default function ShoppingCart() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <div className="flex-1 flex items-center gap-3 px-4 py-3 bg-[#F0F0F0] rounded-[62px]">
-              <Input
-                type="text"
-                placeholder="Add promo code"
-                className="border-0 bg-transparent p-0 h-auto focus-visible:ring-0 placeholder:text-black/40"
-              />
-            </div>
+            
             <Button className="px-4 py-3 h-auto rounded-[62px] bg-black hover:bg-black/90">
               Apply
             </Button>

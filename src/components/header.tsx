@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 import { FaRegUserCircle } from "react-icons/fa"
 import { FiShoppingCart } from "react-icons/fi"
-import { IoIosSearch } from "react-icons/io"
 import { RxCross2 } from "react-icons/rx"
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -158,9 +157,7 @@ export default function Header() {
 
             {/* Search and Icons */}
             <div className="flex items-center gap-4 flex-1 lg:flex-none justify-end lg:justify-start">
-              <Button variant="ghost" size="icon" className="sm:hidden" aria-label="Search">
-                <IoIosSearch className="w-5 h-5" />
-              </Button>
+          
               <Button variant="ghost" size="icon" aria-label="Cart">
                 <Link href={"/Addcard"}>
                   {" "}
