@@ -61,7 +61,7 @@ export default  function Hero() {
                 
                 
                 <Image
-                    src={fetchdata||"/hero-backg\round.jpeg"}
+                    src={fetchdata||"/hero-backGround.jpeg"}
                     alt="hero image"
                     fill
                     className="object-contain md:object-cover"
