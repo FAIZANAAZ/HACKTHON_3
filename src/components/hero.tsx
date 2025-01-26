@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 
 export default  function Hero() {
-const [fetchdata, setfetchData] = useState<string>()
+const [fetchdata, setfetchData] = useState<string>("")
    useEffect(() => {
     const fetchimage =async()=>{
         const res = await client.fetch(`*[_type=='landingpage'][1]{'frontWebImage':sections[0].frontWebImage.asset->url}`);
@@ -25,7 +25,8 @@ const [fetchdata, setfetchData] = useState<string>()
         <section className="w-full h-auto bg-[#F2F0F1] flex flex-col md:flex-row justify-between font-sans">
             {/* Left Content */}
            
-            <div className="flex-1 flex flex-col justify-center items-start gap-4 sm:gap-6 p-6 sm:p-8 md:px-[100px] lg:px-[120px] xl:px-[140px]"> <motion.div
+            <div className="flex-1 flex flex-col justify-center items-start gap-4 sm:gap-6 p-6 sm:p-8 md:px-[100px] lg:px-[120px] xl:px-[140px]">
+             <motion.div
           initial={{opacity :0 ,x:-100}}
          
            whileInView={{opacity:1,x:0}}
@@ -52,7 +53,7 @@ const [fetchdata, setfetchData] = useState<string>()
                 
                 
                 <Image
-                    src={fetchdata || ""}
+                    src={fetchdata }
                     alt="hero image"
                     fill
                     className="object-contain md:object-cover"

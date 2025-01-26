@@ -1,10 +1,9 @@
 "use client"
 
 import Card from "../cards"
-import { client } from "@/sanity/lib/client"
-import { fetchAndUploadProducts } from "@/services/api"
 import { useEffect, useState } from "react"
 import { FiltersSidebar } from "./colorsbar"
+import { get } from "@/services/apiresponse"
 
 
 interface CardItem {
@@ -22,6 +21,7 @@ interface CardItem {
 
 export default function ProductFilterColor() {
   const [Cardapi, setCard] = useState<CardItem[]>([])
+  const [errorr, setError] = useState<string>("")
   const [searchQuery, setSearchQuery] = useState("")
   const [sortOption, setSortOption] = useState<string>("Most Popular")
   const [currentPage, setCurrentPage] = useState<number>(1)
@@ -44,48 +44,15 @@ export default function ProductFilterColor() {
   }
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await client.fetch(`*[_type=="products"]{
-        _id,
-        name,
-        description,
-        price,
-        "imageUrl" : image.asset->url,
-        category,
-        discountPercent,
-        "isNew": new,
-        colors,
-        sizes,
-        dressStyle
-      }`)
-      setCard(products)
-      if (!products || products.length === 0) {
-        await fetchAndUploadProducts()
-
-        const products = await client.fetch(`*[_type == "product" ][]{
-          _id,
-          name,
-          description,
-          "isNew": new,
-          price,
-          discountPercentage,
-          priceWithoutDiscount,
-          rating,
-          ratingCount,
-          tags,
-          sizes,
-          "imageUrl": image.asset->url,
-          colors,
-          category,
-          dressStyle
-        }`)
-        setCard(products)
-      }
-    }
-
-    fetchProducts()
-  }, [])
-
+    try { const fetchProducts = async () => {
+      const api = await get();
+      setCard(api);
+    };
+    fetchProducts();
+  } catch (error) {
+    setError(`Failed to fetch products",${errorr}${error}`);
+  }
+ },[]);
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSortOption(e.target.value)
   }

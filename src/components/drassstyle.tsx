@@ -1,8 +1,9 @@
+
 import Image from "next/image";
 
 export default function DressStyle() {
     return (
-        <section id="drassstyless" className="w-full max-w-[1239px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 flex flex-col items-center justify-center rounded-[20px] sm:rounded-[30px] md:rounded-[40px] bg-[#F0F0F0]">
+        <section className="w-full max-w-[1239px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 flex flex-col items-center justify-center rounded-[20px] sm:rounded-[30px] md:rounded-[40px] bg-[#F0F0F0]">
             <h1 className="w-full max-w-[687px] font-integral text-2xl sm:text-3xl md:text-[48px] font-bold leading-tight sm:leading-snug md:leading-[57.6px] text-center uppercase mb-6 sm:mb-8 md:mb-10">
                 BROWSE BY dress STYLE
             </h1>
