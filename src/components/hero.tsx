@@ -7,20 +7,28 @@ import { motion } from "framer-motion";
 
 
 export default  function Hero() {
-const [fetchdata, setfetchData] = useState<string>("")
-   useEffect(() => {
-    const fetchimage =async()=>{
-        const res = await client.fetch(`*[_type=='landingpage'][1]{'frontWebImage':sections[0].frontWebImage.asset->url}`);
-        
-        const { frontWebImage } = res;
-        setfetchData(frontWebImage)
+    const [fetchdata, setfetchData] = useState<string>("");
+    const [errorr, setError] = useState<string>("ok");
 
 
-        return frontWebImage
-        
-    }
-    fetchimage()
-   })
+    useEffect(() => {
+      const fetchimage = async () => {
+        try {
+          const res = await client.fetch(
+            `*[_type=='landingpage'][1]{'frontWebImage':sections[0].frontWebImage.asset->url}`
+          );
+    
+          const { frontWebImage } = res;
+    
+          setfetchData(frontWebImage);
+          return frontWebImage;
+        } catch (error) {
+            setError(errorr);
+        }
+      };
+    
+      fetchimage();
+    }, []);
     return (
         <section className="w-full h-auto bg-[#F2F0F1] flex flex-col md:flex-row justify-between font-sans">
             {/* Left Content */}
@@ -53,7 +61,7 @@ const [fetchdata, setfetchData] = useState<string>("")
                 
                 
                 <Image
-                    src={fetchdata }
+                    src={fetchdata||"/hero-background.jpeg"}
                     alt="hero image"
                     fill
                     className="object-contain md:object-cover"

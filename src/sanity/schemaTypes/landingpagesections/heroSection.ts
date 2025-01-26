@@ -8,10 +8,7 @@ export const heroSection = {
         {
             title: "FRONT WEB_IMAGE",
             name: "frontWebImage",
-            type: "image",
-            options: {
-              hotspot: true,
-            },
+            type: "image"
         }  ,
     ]
    
