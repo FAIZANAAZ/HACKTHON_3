@@ -21,7 +21,7 @@ interface CardItem {
 
 export default function ProductFilterColor() {
   const [Cardapi, setCard] = useState<CardItem[]>([])
-  const [error, setError] = useState<string>("")
+  const [errorr, setError] = useState<unknown[]>([]);
   const [searchQuery, setSearchQuery] = useState("")
   const [sortOption, setSortOption] = useState<string>("Most Popular")
   const [currentPage, setCurrentPage] = useState<number>(1)
@@ -49,8 +49,8 @@ export default function ProductFilterColor() {
       setCard(api);
     };
     fetchProducts();
-  } catch (_) {
-    setError(`Failed to fetch products",${error}`);
+  } catch (error) {
+    setError([error, ...errorr]);
   }
  },[]);
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

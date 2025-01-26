@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default  function Hero() {
     const [fetchdata, setfetchData] = useState<string>("");
-    const [error, setError] = useState<string>("");
+    const [errorr, setError] = useState<unknown[]>([]);
 
 
     useEffect(() => {
@@ -22,8 +22,8 @@ export default  function Hero() {
     
           setfetchData(frontWebImage);
           return frontWebImage;
-        } catch (_) {
-            setError(error);
+        } catch (error) {
+            setError([error, ...errorr]);
         }
       };
     
