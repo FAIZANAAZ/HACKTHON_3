@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default  function Hero() {
     const [fetchdata, setfetchData] = useState<string>("");
-    const [errorr, setError] = useState<string>("ok");
+    const [error, setError] = useState<string>("");
 
 
     useEffect(() => {
@@ -22,8 +22,8 @@ export default  function Hero() {
     
           setfetchData(frontWebImage);
           return frontWebImage;
-        } catch (error) {
-            setError(errorr);
+        } catch (_) {
+            setError(error);
         }
       };
     
@@ -61,7 +61,7 @@ export default  function Hero() {
                 
                 
                 <Image
-                    src={fetchdata||"/hero-backgrund.jpeg"}
+                    src={fetchdata||"/hero-background.jpeg"}
                     alt="hero image"
                     fill
                     className="object-contain md:object-cover"
