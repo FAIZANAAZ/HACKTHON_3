@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { client } from "@/sanity/lib/client";
 import Card from "@/components/cards";
+import { sanityPostUserData } from "@/services/userapicler";
 
 interface CasualData {
   casualHeading: string;
@@ -32,6 +33,10 @@ export default function ProductFilterColor() {
     fetchData();
   }, []);
 
+  // dor clerk 
+  useEffect(() => {
+    sanityPostUserData();
+  },[])
   // Sorting function
   useEffect(() => {
     let sorted = [...res];

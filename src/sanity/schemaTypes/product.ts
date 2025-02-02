@@ -18,7 +18,7 @@ export const product = {
         {
         name: 'description',
         title: 'Description',
-        type: 'text',
+        type: 'string',
         },
         {
         name: 'image',
@@ -44,6 +44,7 @@ export const product = {
             title:"Discount Percent",
             type: 'number',
         },
+    
         {
             name:"new",
             type: 'boolean',

@@ -169,7 +169,7 @@ export default  function ProductDetail({ searchParams }: { searchParams: Promise
 
               <div className="flex  justify-center items-center  md:flex-row  gap-6">
     
-                <Link href={"/SignUp"}> <Button onClick={handleAddToCart} className="h-12 px-12 rounded-[40px] w-full   text-white hover:bg-black/90">
+                <Link href={"/Addcard"}> <Button onClick={handleAddToCart} className="h-12 px-12 rounded-[40px] w-full   text-white hover:bg-black/90">
                   Add to Cart
                 </Button></Link> 
               </div>

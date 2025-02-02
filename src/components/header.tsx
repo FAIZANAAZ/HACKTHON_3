@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { FaRegUserCircle } from "react-icons/fa"
 import { FiShoppingCart } from "react-icons/fi"
 import { RxCross2 } from "react-icons/rx"
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { UserButton } from "@clerk/nextjs"
 
 export default function Header() {
   return (
@@ -87,9 +87,7 @@ export default function Header() {
                   <Link href="/Product" className="text-lg hover:underline">
                     Our Products
                   </Link>
-                  <Button variant="ghost" size="icon" aria-label="Account">
-                    <FaRegUserCircle className="w-10 h-10" />
-                  </Button>
+                  <UserButton/>
                 </div>
               </SheetContent>
             </Sheet>
@@ -157,7 +155,7 @@ export default function Header() {
 
             {/* Search and Icons */}
             <div className="flex items-center gap-4 flex-1 lg:flex-none justify-end lg:justify-start">
-          
+            <UserButton/>
               <Button variant="ghost" size="icon" aria-label="Cart">
                 <Link href={"/Addcard"}>
                   {" "}
