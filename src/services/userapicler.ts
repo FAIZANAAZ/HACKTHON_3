@@ -34,6 +34,6 @@ export async function sanityPostUserData() {
      
    }
 
-  const res = client.createOrReplace(useObject)
-//   return res   
+   client.createOrReplace(useObject)
+
 }
