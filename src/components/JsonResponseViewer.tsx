@@ -68,14 +68,7 @@ export default function JsonResponseViewer({ data }: JsonResponseViewerProps) {
       >
         View Shipment Details
       </Button>
-      <Link href={`/Thanks`}>
-      <Button 
-        className="bg-blue-900 border-2 ml-3 border-black hover:bg-blue-600 text-white"
-        
-      >
-        Ready For Order
-      </Button>
-      </Link>
+     
 
       <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         {/* ye function ko open close ke khod hndle krta he jesy  isDialogOpen he yani jo usestate me he bydefault wo hoga or phir onOpenChange pr hmny 
@@ -123,13 +116,14 @@ export default function JsonResponseViewer({ data }: JsonResponseViewerProps) {
               <Download className="mr-2 h-4 w-4" />
               Download Label
             </Button>
-            <Button 
-              variant="outline" 
-              className="mt-4"
-              onClick={() => setIsDialogOpen(false)}
-            >
-              Close
-            </Button>
+            <Link href={`/Thanks`}>
+      <Button 
+        className="bg-blue-900 border-2 mt-4 border-black hover:bg-blue-600 text-white"
+        
+      >
+       Close
+      </Button>
+      </Link>
 
           </AlertDialogFooter>
         </AlertDialogContent>

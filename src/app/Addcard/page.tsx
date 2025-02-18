@@ -146,9 +146,9 @@ export default function ShoppingCart() {
               Apply
             </Button>
           </div>
-         <Link href="/Order_confirm">
+         <Link href={`/payment?amount=${total.toFixed(2)}`}>
          <Button className="mt-3 w-full h-[60px] rounded-[62px] bg-black hover:bg-black/90 text-base">
-         Add Address Details
+         Lets Pay 
           </Button>
          </Link>
         </div>
